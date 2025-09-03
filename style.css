@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #0f2027; /* chalkboard vibe */
+  background: linear-gradient(120deg, #2c5364, #203a43, #0f2027);
+}
+
+.paper {
+  background-image: url("https://i0.wp.com/textures.world/wp-content/uploads/2018/10/2-Millimeter-Paper-Background-copy.jpg?ssl=1");
+  background-size: 500px;
+  padding: 20px 100px;
+  transform: rotateZ(-5deg);
+  box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
+  position: absolute;
+  border-radius: 12px;
+}
+
+.paper.heart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.paper.image {
+  padding: 10px;
+}
+.paper.image p {
+  font-size: 28px;
+  font-family: 'Short Stack', cursive;
+  color: #1a2a6c;
+}
+
+img {
+  max-height: 200px;
+  width: 100%;
+  border-radius: 10px;
+  user-select: none;
+}
+
+.paper.heart::after {
+  content: "";
+  background-image: url('https://cdn-icons-png.flaticon.com/512/2830/2830309.png'); /* book icon */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+
+p {
+  font-family: 'Zeyada';
+  font-size: 40px;
+  color: #fff;
+  opacity: 0.85;
+  user-select: none;
+}
+
+/* 🎉 Splash screen */
+#splash {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.splash-text {
+  font-size: 60px;
+  color: gold;
+  text-align: center;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #fff, 0 0 20px gold; }
+  to   { text-shadow: 0 0 20px #ff0, 0 0 30px orange; }
+}
+
+#music-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 22px;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000;
+}
